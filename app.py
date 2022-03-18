@@ -1,6 +1,21 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///art.db'
+
+#initialise the database
+db = SQLAlchemy(app)
+
+#Create database model
+class Art_pieces(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    #Function to return a string of something
+    def __repr__(self):
+        return '<Name %r>' % self.id
 
 subscribers = []
 
