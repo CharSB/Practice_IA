@@ -8,8 +8,7 @@ body{
 }
 
 p{
-    color: #9f4c49;
-    background-color: #919bf0;
+    color: #161616;
 }
 
 
@@ -34,6 +33,7 @@ p{
 
 .navbar{
     border: #9f4c49;
+    background-color: #161616;
 }
 
 img{

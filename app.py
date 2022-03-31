@@ -19,6 +19,26 @@ class Art_pieces(db.Model):
 
 subscribers = []
 
+@app.route('/gallery', methods=["POST", "GET"])
+def gallery():
+
+    if request.method == "POST":
+        piece_name = request.form["piece_name"]
+        new_piece = Art_pieces(title=piece_name)
+
+        #Push to db
+        try:
+            db.session.add(new_piece)
+            db.session.commit()
+            return redirect("/gallery")
+        except:
+            return "Error adding piece"
+
+        return "You added something"
+    else:
+        pieces = Art_pieces.query.order_by(Art_pieces.date_created)
+        return render_template("gallery.html", pieces=pieces)
+
 @app.route('/')
 def index():
     return render_template("index.html")

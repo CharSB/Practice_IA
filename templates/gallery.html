@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title%}Gallery{% endblock %}
+
+{% block content %} 
+      <div class="container">
+          <h1>Gallery</h1>
+          <br/>
+          <form action="/gallery" METHOD = "POST">
+              <input type="text" placeholder="name" name="piece_name">
+              <input type="submit" value="Add Name" class="btn btn-seconday">
+          </form>
+          <br/>
+
+          {% for piece in pieces%}
+          <h4>
+              {{ piece.title }}
+          </h4>
+          {% endfor %}
+      </div>
+{% endblock %}
