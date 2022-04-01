@@ -32,7 +32,7 @@ def gallery():
             db.session.commit()
             return redirect("/gallery")
         except:
-            return "Error adding piece"
+            return "Error adding artwork"
 
         return "You added something"
     else:

@@ -1,16 +1,6 @@
-h1{
-    color: #161616;
-    font-size: 96px;
-}
-
-body{
-    background-color: #f0f0f0;
-}
-
-p{
-    color: #161616;
-}
-
+h1{ color: #161616; font-size: 96px;}
+body{ background-color: #f0f0f0;}
+p{ color: #161616;}
 
 .container{
     border: 3px solid #161616;
@@ -21,23 +11,9 @@ p{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
-
-.nav-pills>li.active>a:hover{color:#919bf0;background-color:#9f4c49}
+.nav-pills>li.active>a:hover{ color:#919bf0; background-color:#9f4c49}
 .nav-pills>li>a{border-radius:0px}
+.nav-pills{ border-radius: 0; border: #9f4c49;}
+.navbar{ border: #9f4c49; background-color: #161616;}
 
-.nav-pills{
-    border-radius: 0;
-    border: #9f4c49;
-}
-
-.navbar{
-    border: #9f4c49;
-    background-color: #161616;
-}
-
-img{
-    border: #9f4c49;
-    border-width: 2px;
-}
-
+img{ border: #9f4c49; border-width: 2px;}
